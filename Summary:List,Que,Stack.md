@@ -7,7 +7,7 @@ else return p;
 
 或者说直接简化为：return p;
 对于这样的修改，程序还正确吗？为什么？
-```
+```c
 List FindKth( int K, List PtrL )
 {     List  p = PtrL;
        int  i = 1;
@@ -22,7 +22,7 @@ List FindKth( int K, List PtrL )
 solution：wrong ,when K<0,the function will return PtrL. the right return value is NULL 
 ### 讨论2.2 堆栈顺序存储的另一种实现？老师参与
 有人给出了堆栈用数组实现的另一种方式，即直接在函数参数中传递数组和top变量（而不是两者组成的结构指针），其中Push操作函数设计如下。这个Push函数正确吗？为什么？
-```
+```c
 #define MaxSize 100
 ElementType S[MaxSize];
 int top;
