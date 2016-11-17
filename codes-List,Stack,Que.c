@@ -138,6 +138,36 @@ List Delete(int i,List PtrL){
 	free(S);
 	retrun PtrL;
 }
-
+//Stack implemented by links
+typedef struct Snode *Stack;
+struct Snode{
+	Elementtype Data;
+	Stack Next;
+}
+Stack CreateStack(){
+	Stack S;
+	S=(Stack)malloc(sizeof(struct Snode));
+	S->Next==NULL;
+	return S;
+}
+int IsEmpty(Stack S){
+	return (S->next==NULL);
+}
+void push(Stack S,Elementtype X){
+	struct Snode *p;
+	p->Data=X;
+	p->Next=S->next;
+	s->next=p;
+}
+Elementtype pop(Stack S,Elementtype X){
+	struct Snode *p;
+	if(isempty(S)) {
+		printf("空")；
+		return;
+	}
+	p=S->next;
+	S->next=p->next;
+	retrun p->Data;
+}
 
 
