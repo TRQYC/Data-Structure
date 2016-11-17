@@ -19,4 +19,4 @@ List FindKth( int K, List PtrL )
        else  return NULL;    /* 否则返回空 */
 }
 ```
-
+solution：wrong ,when K<0,the function will return PtrL. the right return value is NULL 
