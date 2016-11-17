@@ -169,5 +169,32 @@ Elementtype pop(Stack S,Elementtype X){
 	S->next=p->next;
 	retrun p->Data;
 }
+Queue implemented by links
+struct Node{
+	Elementtype Data;
+	struct Node *Next;
+};
+Struct Qnode{
+	Struct Node *rear;
+	Struct Node *front;
+};
+typedef Struct Qnode *Queue;
+Queue PtrQ;
 
+Elementtype DeleteQ(Queue PtrQ){
+	if(ptrQ->front==NULL)
+	{
+		printf("空");
+		return;
+	}
+	Elementtype p=PtrQ->front->Data;
+	struct Node *temp;
+	temp=PtrQ->front;
+	if(PtrQ->front==PtrQ->rear)
+		PtrQ->front=PtrQ->rear=NULL;
+	else
+		PtrQ->front=PtrQ->front->next;
+	free(temp):
+	return p;
+}
 
