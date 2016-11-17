@@ -20,7 +20,7 @@ List FindKth( int K, List PtrL )
 }
 ```
 solution：wrong ,when K<0,the function will return PtrL. the right return value is NULL 
-### 讨论2.2 堆栈顺序存储的另一种实现？老师参与
+### 讨论2.2 堆栈顺序存储的另一种实现？
 有人给出了堆栈用数组实现的另一种方式，即直接在函数参数中传递数组和top变量（而不是两者组成的结构指针），其中Push操作函数设计如下。这个Push函数正确吗？为什么？
 ```c
 #define MaxSize 100
@@ -36,7 +36,7 @@ void Push(ElementType *S, int top, ElementType item)
 }
 ```
 solution:wrong since the head of stack doesn‘t change
-### 讨论2.3 如何用两个堆栈模拟实现一个队列?老师参与
+### 讨论2.3 如何用两个堆栈模拟实现一个队列?
 如何用两个堆栈模拟实现一个队列?  如果这两个堆栈的容量分别是m和n（m>n)，你的方法能保证的队列容量是多少？
 
 solution: 
