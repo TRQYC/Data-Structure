@@ -1,5 +1,5 @@
 
-List implemented by arrays
+///List implemented by arrays
 typedef int Position;
 typedef struct Lnode *List;
 structure Lnode{
