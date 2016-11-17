@@ -38,8 +38,14 @@ void Push(ElementType *S, int top, ElementType item)
 solution:wrong since the head of stack doesn‘t change
 ### 讨论2.3 如何用两个堆栈模拟实现一个队列?老师参与
 如何用两个堆栈模拟实现一个队列?  如果这两个堆栈的容量分别是m和n（m>n)，你的方法能保证的队列容量是多少？
-solution: 出栈时，将所有m栈内容pop然后push进m栈再pop出去，然后再pop n栈中所有剩余的元素，push进入m栈
-          所以最大容量为n
+
+solution: 
+step1:入队列时，push进入m栈,出队列时，如果n栈内容为空则进入step3,否则进入steo4
+step2:（无内容，不想改数字了）
+step3:pop m栈，push进n栈,直至m栈只剩一个元素。pop m栈(此为出队列的元素）.返回step1.
+step4:pop n栈（此为出队列元素）。返回step1.
+所以能保证的队伍容量为n+1.（最好情况为无限大。最差情况为n+1)
+
           
           
          所以队伍容量是n
